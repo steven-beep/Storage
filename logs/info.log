@@ -1,0 +1,42 @@
+2022-07-18 10:01:36.132 INFO  14552 --- [main] com.al_tair.storage.StorageApplication - Starting StorageApplication on LAPTOP-EINLAL7G with PID 14552 (E:\Java\javaBigProject\StorageProject\storage\target\classes started by Ushop in E:\Java\javaBigProject\StorageProject\storage)
+2022-07-18 10:01:36.136 INFO  14552 --- [main] com.al_tair.storage.StorageApplication - No active profile set, falling back to default profiles: default
+2022-07-18 10:01:36.547 INFO  14552 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-07-18 10:01:36.558 INFO  14552 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 JDBC repository interfaces.
+2022-07-18 10:01:36.816 INFO  14552 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-07-18 10:01:36.821 INFO  14552 --- [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-07-18 10:01:36.822 INFO  14552 --- [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-18 10:01:36.822 INFO  14552 --- [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-18 10:01:36.823 INFO  14552 --- [main] org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-07-18 10:01:36.823 INFO  14552 --- [main] org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-07-18 10:01:36.823 INFO  14552 --- [main] org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-07-18 10:01:36.823 INFO  14552 --- [main] org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-07-18 10:01:37.860 INFO  14552 --- [main] org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-07-18 10:01:37.920 INFO  14552 --- [main] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-18 10:01:37.920 INFO  14552 --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1742 ms
+2022-07-18 10:01:38.043 INFO  14552 --- [main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-18 10:01:38.192 INFO  14552 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-18 10:01:38.454 INFO  14552 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-18 10:01:38.491 INFO  14552 --- [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-07-18 10:01:38.506 INFO  14552 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-07-18 10:01:38.512 INFO  14552 --- [main] com.al_tair.storage.StorageApplication - Started StorageApplication in 2.619 seconds (JVM running for 3.992)
+2022-07-18 10:04:20.354 INFO  12404 --- [main] com.al_tair.storage.StorageApplication - Starting StorageApplication on LAPTOP-EINLAL7G with PID 12404 (E:\Java\javaBigProject\StorageProject\storage\target\classes started by Ushop in E:\Java\javaBigProject\StorageProject\storage)
+2022-07-18 10:04:20.357 INFO  12404 --- [main] com.al_tair.storage.StorageApplication - No active profile set, falling back to default profiles: default
+2022-07-18 10:04:20.710 INFO  12404 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-07-18 10:04:20.720 INFO  12404 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 JDBC repository interfaces.
+2022-07-18 10:04:21.013 INFO  12404 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9999 (http)
+2022-07-18 10:04:21.019 INFO  12404 --- [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2022-07-18 10:04:21.020 INFO  12404 --- [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-18 10:04:21.020 INFO  12404 --- [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-18 10:04:21.021 INFO  12404 --- [main] org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-07-18 10:04:21.021 INFO  12404 --- [main] org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-07-18 10:04:21.021 INFO  12404 --- [main] org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-07-18 10:04:21.021 INFO  12404 --- [main] org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-07-18 10:04:22.064 INFO  12404 --- [main] org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-07-18 10:04:22.128 INFO  12404 --- [main] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-18 10:04:22.128 INFO  12404 --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1736 ms
+2022-07-18 10:04:22.253 INFO  12404 --- [main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-18 10:04:22.399 INFO  12404 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-18 10:04:22.712 INFO  12404 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-18 10:04:22.748 INFO  12404 --- [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9999"]
+2022-07-18 10:04:22.763 INFO  12404 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9999 (http) with context path ''
+2022-07-18 10:04:22.769 INFO  12404 --- [main] com.al_tair.storage.StorageApplication - Started StorageApplication in 2.671 seconds (JVM running for 4.068)
