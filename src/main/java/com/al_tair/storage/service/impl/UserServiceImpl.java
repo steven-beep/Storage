@@ -5,8 +5,11 @@ import com.al_tair.storage.mapper.UserMapper;
 import com.al_tair.storage.model.User;
 import com.al_tair.storage.service.UserService;
 import com.al_tair.storage.util.DateUtil;
+import com.al_tair.storage.util.JwtUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -27,6 +30,14 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Resource
     UserMapper userMapper;
 
+    @Resource
+    JwtUtil jwtUtil;
+
+    /**
+     * 注册用户
+     * @param user 用户信息
+     * @return
+     */
     @Override
     public RestResult<String> registerUser(User user) {
         //判断验证码
@@ -57,6 +68,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
     }
 
+    /**
+     * 电话是否存在
+     * @param telePhone 电话
+     * @return
+     */
     private boolean isTelePhoneExit(String telePhone) {
         LambdaQueryWrapper<User> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(User::getTelephone, telePhone);
@@ -68,6 +84,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         }
     }
 
+    /**
+     * 用户登录
+     * @param user 用户信息
+     * @return
+     */
     @Override
     public RestResult<User> login(User user) {
         String telephone = user.getTelephone();
@@ -77,6 +98,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         lambdaQueryWrapper.eq(User::getTelephone, telephone);
         User saveUser = userMapper.selectOne(lambdaQueryWrapper);
         String salt = saveUser.getSalt();
+        // 密码参入盐值以及MD5加密
         String passwordAndSalt = password + salt;
         String newPassword = DigestUtils.md5DigestAsHex(passwordAndSalt.getBytes());
         if (newPassword.equals(saveUser.getPassword())) {
@@ -87,5 +109,27 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             return RestResult.fail().message("手机号或密码错误！");
         }
 
+    }
+
+    /**
+     * 通过 token 获取到用户信息
+     * @param token 验证用户登录
+     * @return
+     */
+    @Override
+    public User getUserByToken(String token) {
+        User tokenUserInfo = null;
+        try {
+
+            Claims c = jwtUtil.parseJWT(token);
+            String subject = c.getSubject();
+            ObjectMapper objectMapper = new ObjectMapper();
+            tokenUserInfo = objectMapper.readValue(subject, User.class);
+
+        } catch (Exception e) {
+            log.error("解码异常");
+            return null;
+        }
+        return tokenUserInfo;
     }
 }

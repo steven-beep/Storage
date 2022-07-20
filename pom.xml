@@ -16,6 +16,20 @@
     </properties>
 
     <dependencies>
+        <!-- OpenAPI: swagger 和 knife4j 选择其中一个 -->
+        <!-- SpringDoc 支持 Swagger 页面 Oauth2 登录 -->
+        <!--<dependency>-->
+        <!--    <groupId>org.springdoc</groupId>-->
+        <!--    <artifactId>springdoc-openapi-ui</artifactId>-->
+        <!--    <version>1.5.4</version>-->
+        <!--</dependency>-->
+        <!-- knife4j 集成 -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+
         <!-- jwt 实现用户登录认证 -->
         <dependency>
             <groupId>io.jsonwebtoken</groupId>

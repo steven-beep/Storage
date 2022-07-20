@@ -32,7 +32,7 @@ public class GlobalExceptionHandlerAdvice {
      */
     public RestResult error(NullPointerException e) {
         e.printStackTrace();
-        log.error("全局异常捕获：" + e);
+        log.error("异常捕获信息：" + e.getMessage());
         return RestResult.setResult(ResultCodeEnum.NULL_POINT);
     }
 
@@ -43,7 +43,7 @@ public class GlobalExceptionHandlerAdvice {
      */
     public RestResult error(IndexOutOfBoundsException e) {
         e.printStackTrace();
-        log.error("全局异常捕获：" + e);
+        log.error("异常捕获信息：" + e.getMessage());
         return RestResult.setResult(ResultCodeEnum.INDEX_OUT_OF_BOUNDS);
     }
 }

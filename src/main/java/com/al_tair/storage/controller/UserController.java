@@ -1,13 +1,15 @@
 package com.al_tair.storage.controller;
 
 import com.al_tair.storage.common.RestResult;
-import com.al_tair.storage.dto.LoginVO;
+import com.al_tair.storage.vo.LoginVO;
 import com.al_tair.storage.dto.RegisterDTO;
 import com.al_tair.storage.model.User;
 import com.al_tair.storage.service.UserService;
 import com.al_tair.storage.util.JwtUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Claims;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +23,7 @@ import javax.annotation.Resource;
 @Slf4j
 @RestController
 @RequestMapping("/user")
+@Tag(name = "user", description = "该接口为用户接口，主要做用户登录，注册和校验token")
 public class UserController {
 
     @Autowired
@@ -36,6 +39,7 @@ public class UserController {
      */
     @PostMapping(value = "/register")
     @ResponseBody
+    @Operation(summary = "用户注册", description = "注册账号", tags = {"user"})
     public RestResult<String> register(@RequestBody RegisterDTO registerDTO) {
         RestResult<String> restResult = null;
         User user = new User();
@@ -47,8 +51,15 @@ public class UserController {
         return restResult;
     }
 
+    /**
+     * 登录模块
+     * @param telephone 电话
+     * @param password 密码
+     * @return
+     */
     @GetMapping(value = "/login")
     @ResponseBody
+    @Operation(summary = "用户登录", description = "用户登录认证后才能进入系统", tags = {"user"})
     public RestResult<LoginVO> userLogin(String telephone, String password) {
         RestResult<LoginVO> restResult = new RestResult<LoginVO>();
         LoginVO loginVO = new LoginVO();
@@ -73,9 +84,15 @@ public class UserController {
         return RestResult.success().data(loginVO);
     }
 
+    /**
+     * 验证token
+     * @param token
+     * @return
+     */
     @GetMapping("/checkuserlogininfo")
     @ResponseBody
-    public RestResult<User> checkToken(String token) { // @RequestHeader("token")
+    @Operation(summary = "检查用户登录信息", description = "验证token的有效性", tags = {"user"})
+    public RestResult<User> checkToken(@RequestHeader("token") String token) {
         RestResult<User> restResult = new RestResult<User>();
         User tokenUserInfo = null;
         try {
@@ -94,45 +111,5 @@ public class UserController {
         } else {
             return RestResult.fail().message("用户暂未登录");
         }
-    }
-
-    /**
-     * 成功响应测试
-     */
-    @GetMapping(value="/test1")
-    @ResponseBody
-    public RestResult test1(){
-        return RestResult.success();
-    }
-
-    /**
-     * 失败响应测试
-     */
-    @GetMapping(value="/test2")
-    @ResponseBody
-    public RestResult test2(){
-        return RestResult.fail();
-    }
-
-    /**
-     * 空指针异常响应测试
-     */
-    @GetMapping(value="/test3")
-    @ResponseBody
-    public RestResult test3(){
-        String s = null;
-        int i = s.length();
-        return RestResult.success();
-    }
-
-    /**
-     * 空指针异常响应测试
-     */
-    @GetMapping(value="/test4")
-    @ResponseBody
-    public RestResult test4(){
-        int[] num = new int[2];
-        num[2] = 2;
-        return RestResult.success();
     }
 }

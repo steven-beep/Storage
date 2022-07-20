@@ -10,6 +10,7 @@ import javax.persistence.*;
  * @author Al_tair
  * @date 2022/7/18-10:29
  */
+
 @Data
 @Table(name = "user")
 @Entity
