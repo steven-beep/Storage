@@ -16,6 +16,27 @@
     </properties>
 
     <dependencies>
+        <!-- commons-io 中封装了很多对输入输出流的操作 -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.8.0</version>
+        </dependency>
+
+        <!-- thumbnailator 是一个用来生成图像缩略图的 Java 类库 -->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>0.4.13</version>
+        </dependency>
+
+        <!-- Fastjson 是一个 Java 库,Java 对象和 JSON 格式的转换 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.75</version>
+        </dependency>
+
         <!-- OpenAPI: swagger 和 knife4j 选择其中一个 -->
         <!-- SpringDoc 支持 Swagger 页面 Oauth2 登录 -->
         <!--<dependency>-->

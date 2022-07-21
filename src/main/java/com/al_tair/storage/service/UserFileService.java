@@ -31,4 +31,53 @@ public interface UserFileService extends IService<UserFile> {
      * @return
      */
     Map<String, Object> getUserFileByType(int fileType, Long currentPage, Long pageCount, Long userId);
+
+    /**
+     * 删除逻辑文件
+     * @param userFileId
+     * @param sessionUserId
+     */
+    void deleteUserFile(Long userFileId, Long sessionUserId);
+
+    /**
+     * 批量删除逻辑文件
+     * @param filePath
+     * @param userId
+     * @return
+     */
+    List<UserFile> selectFileTreeListLikeFilePath(String filePath, long userId);
+
+    /**
+     * 通过文件 ID 查询文件路径
+     * @param userId
+     * @return
+     */
+    List<UserFile> selectFilePathTreeByUserId(Long userId);
+
+    /**
+     * 更新文件路径
+     * @param oldfilePath
+     * @param newfilePath
+     * @param fileName
+     * @param extendName
+     * @param userId
+     */
+    void updateFilepathByFilepath(String oldfilePath, String newfilePath, String fileName, String extendName, Long userId);
+
+    /**
+     *
+     * @param fileName
+     * @param filePath
+     * @param userId
+     * @return
+     */
+    List<UserFile> selectUserFileByNameAndPath(String fileName, String filePath, Long userId);
+
+    /**
+     *
+     * @param filePath
+     * @param oldFilePath
+     * @param userId
+     */
+    void replaceUserFilePath(String filePath, String oldFilePath, Long userId);
 }

@@ -2,6 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.al_tair.storage.mapper.UserFileMapper">
+    <!--<select id="userfileList" resultType="com.al_tair.storage.vo.UserFileListVO">-->
+    <!--    select * from userfile a-->
+    <!--    left join file on file.fileId = a.fileId-->
+    <!--    <where>-->
+    <!--        <if test="userfile.userId != null">-->
+    <!--            and a.userId = #{userfile.userId}-->
+    <!--        </if>-->
+    <!--        <if test="userfile.filePath != null">-->
+    <!--            and a.filePath = #{userfile.filePath}-->
+    <!--        </if>-->
+    <!--        <if test="userfile.extendName != null">-->
+    <!--            and a.extendName = #{userfile.extendName}-->
+    <!--        </if>-->
+    <!--    </where>-->
+    <!--    ORDER BY  isDir desc-->
+    <!--    limit #{beginCount}, #{pageCount}-->
+    <!--</select>-->
+
     <select id="userfileList" resultType="com.al_tair.storage.vo.UserFileListVO">
         select * from userfile a
         left join file on file.fileId = a.fileId
@@ -15,11 +33,28 @@
             <if test="userfile.extendName != null">
                 and a.extendName = #{userfile.extendName}
             </if>
+            and a.deleteFlag = 0
         </where>
         ORDER BY  isDir desc
         limit #{beginCount}, #{pageCount}
     </select>
 
+    <!--<sql id="selectByExtendName" >-->
+    <!--    left join file on file.fileId = userfile.fileId-->
+    <!--    where extendName in-->
+    <!--    <foreach collection="fileNameList" open="(" close=")" separator="," item="fileName" >-->
+    <!--        #{fileName}-->
+    <!--    </foreach>-->
+    <!--    and userId = #{userId}-->
+    <!--</sql>-->
+    <!--<sql id="selectByNotExtendName">-->
+    <!--    left join file on file.fileId = userfile.fileId-->
+    <!--    where extendName not in-->
+    <!--    <foreach collection="fileNameList" open="(" close=")" separator="," item="fileName" >-->
+    <!--        #{fileName}-->
+    <!--    </foreach>-->
+    <!--    and userId = #{userId}-->
+    <!--</sql>-->
     <sql id="selectByExtendName" >
         left join file on file.fileId = userfile.fileId
         where extendName in
@@ -27,6 +62,7 @@
             #{fileName}
         </foreach>
         and userId = #{userId}
+        and deleteFlag = 0
     </sql>
     <sql id="selectByNotExtendName">
         left join file on file.fileId = userfile.fileId
@@ -35,7 +71,9 @@
             #{fileName}
         </foreach>
         and userId = #{userId}
+        and deleteFlag = 0
     </sql>
+
     <select id="selectFileByExtendName" parameterType="com.al_tair.storage.model.UserFile" resultType="com.al_tair.storage.vo.UserFileListVO">
         select * from userfile
         <include refid="selectByExtendName"></include>
@@ -56,5 +94,21 @@
     <select id="selectCountNotInExtendNames" parameterType="com.al_tair.storage.model.UserFile" resultType="java.lang.Long">
         select count(*) from userfile
         <include refid="selectByNotExtendName"></include>
+    </select>
+
+    <update id="updateFilepathByFilepath">
+        UPDATE userfile SET filePath=REPLACE(filePath, #{param1}, #{param2})
+        WHERE filePath like N'${param1}%' and userId = #{param3}
+    </update>
+
+    <update id="replaceFilePath">
+        UPDATE userfile SET filepath=REPLACE(filepath, #{oldFilePath}, #{filePath})
+        WHERE filepath LIKE N'${oldFilePath}%' and userId = #{userId};
+    </update>
+
+    <select id="selectStorageSizeByUserId" resultType="java.lang.Long" parameterType="java.lang.Long">
+        SELECT SUM(fileSize) FROM userfile
+        LEFT JOIN file ON file.fileId = userfile.fileId
+        WHERE userfile.userId = #{userId} and deleteFlag = 0
     </select>
 </mapper>

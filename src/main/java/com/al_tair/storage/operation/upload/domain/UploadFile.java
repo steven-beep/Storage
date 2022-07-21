@@ -1,0 +1,26 @@
+package com.al_tair.storage.operation.upload.domain;
+
+import lombok.Data;
+
+/**
+ * @author Al_tair
+ * @date 2022/7/21-13:49
+ */
+@Data
+public class UploadFile {
+    private String fileName;
+    private String fileType;
+    private long fileSize;
+    private String timeStampName;
+    private int success;
+    private String message;
+    private String url;
+    //切片上传相关参数
+    private String taskId;
+    private int chunkNumber;
+    private long chunkSize;
+    private int totalChunks;
+    private String identifier;
+    private long totalSize;
+    private long currentChunkSize;
+}

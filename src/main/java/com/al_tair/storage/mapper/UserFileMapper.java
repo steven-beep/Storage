@@ -60,4 +60,27 @@ public interface UserFileMapper extends BaseMapper<UserFile> {
      * @return
      */
     Long selectCountNotInExtendNames(@Param("fileNameList") List<String> fileNameList,@Param("beginCount") Long beginCount,@Param("pageCount") Long pageCount,@Param("userId") long userId);
+
+    /**
+     * 更新文件路径
+     * @param oldfilePath
+     * @param newfilePath
+     * @param userId
+     */
+    void updateFilepathByFilepath(@Param("oldfilePath") String oldfilePath,@Param("newfilePath") String newfilePath,@Param("userId") Long userId);
+
+    /**
+     *
+     * @param filePath
+     * @param oldFilePath
+     * @param userId
+     */
+    void replaceFilePath(@Param("filePath") String filePath, @Param("oldFilePath") String oldFilePath, @Param("userId") Long userId);
+
+    /**
+     *
+     * @param userId
+     * @return
+     */
+    Long selectStorageSizeByUserId(Long userId);
 }
