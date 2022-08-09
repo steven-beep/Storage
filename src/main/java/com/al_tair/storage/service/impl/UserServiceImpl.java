@@ -56,7 +56,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         String newPassword = DigestUtils.md5DigestAsHex(passwordAndSalt.getBytes());
 
         user.setSalt(salt);
-
         user.setPassword(newPassword);
         user.setRegisterTime(DateUtil.getCurrentTime());
         int result = userMapper.insert(user);

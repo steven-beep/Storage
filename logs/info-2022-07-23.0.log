@@ -1,0 +1,82 @@
+2022-07-23 21:54:52.569 INFO  22564 --- [main] com.al_tair.storage.StorageApplication - Starting StorageApplication on LAPTOP-EINLAL7G with PID 22564 (E:\Java\javaBigProject\StorageProject\storage\target\classes started by Ushop in E:\Java\javaBigProject\StorageProject\storage)
+2022-07-23 21:54:52.573 INFO  22564 --- [main] com.al_tair.storage.StorageApplication - No active profile set, falling back to default profiles: default
+2022-07-23 21:54:53.530 INFO  22564 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 21:54:53.531 INFO  22564 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-07-23 21:54:53.551 INFO  22564 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 JDBC repository interfaces.
+2022-07-23 21:54:53.558 INFO  22564 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 21:54:53.558 INFO  22564 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-23 21:54:53.568 INFO  22564 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 JPA repository interfaces.
+2022-07-23 21:54:54.035 INFO  22564 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2022-07-23 21:54:54.043 INFO  22564 --- [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2022-07-23 21:54:54.043 INFO  22564 --- [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-23 21:54:54.043 INFO  22564 --- [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-23 21:54:54.044 INFO  22564 --- [main] org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-07-23 21:54:54.044 INFO  22564 --- [main] org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-07-23 21:54:54.044 INFO  22564 --- [main] org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-07-23 21:54:54.044 INFO  22564 --- [main] org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-07-23 21:54:55.149 INFO  22564 --- [main] org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-07-23 21:54:55.245 INFO  22564 --- [main] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-23 21:54:55.246 INFO  22564 --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2621 ms
+2022-07-23 21:54:55.418 INFO  22564 --- [main] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-23 21:54:55.472 INFO  22564 --- [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-07-23 21:54:55.669 INFO  22564 --- [main] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-23 21:54:55.762 INFO  22564 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-23 21:54:56.119 INFO  22564 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-23 21:54:56.132 INFO  22564 --- [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-23 21:54:56.700 INFO  22564 --- [main] o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-23 21:54:56.707 INFO  22564 --- [main] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-23 21:54:58.557 WARN  22564 --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-23 21:54:58.734 INFO  22564 --- [main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 21:54:58.937 INFO  22564 --- [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2022-07-23 21:54:58.957 INFO  22564 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2022-07-23 21:54:59.353 INFO  22564 --- [main] com.al_tair.storage.StorageApplication - Started StorageApplication in 7.126 seconds (JVM running for 9.008)
+2022-07-23 21:55:11.632 INFO  22564 --- [http-nio-9998-exec-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-23 21:55:11.632 INFO  22564 --- [http-nio-9998-exec-1] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-23 21:55:11.644 INFO  22564 --- [http-nio-9998-exec-1] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2022-07-23 21:57:08.547 ERROR 22564 --- [http-nio-9998-exec-5] com.al_tair.storage.controller.UserController - 解码异常
+2022-07-23 21:57:08.633 ERROR 22564 --- [http-nio-9998-exec-7] com.al_tair.storage.controller.UserController - 解码异常
+2022-07-23 22:34:05.010 INFO  12008 --- [main] com.al_tair.storage.StorageApplication - Starting StorageApplication on LAPTOP-EINLAL7G with PID 12008 (E:\Java\javaBigProject\StorageProject\storage\target\classes started by Ushop in E:\Java\javaBigProject\StorageProject\storage)
+2022-07-23 22:34:05.013 INFO  12008 --- [main] com.al_tair.storage.StorageApplication - No active profile set, falling back to default profiles: default
+2022-07-23 22:34:05.838 INFO  12008 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 22:34:05.839 INFO  12008 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-07-23 22:34:05.860 INFO  12008 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 JDBC repository interfaces.
+2022-07-23 22:34:05.867 INFO  12008 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-23 22:34:05.867 INFO  12008 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-23 22:34:05.875 INFO  12008 --- [main] o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 JPA repository interfaces.
+2022-07-23 22:34:06.350 INFO  12008 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9998 (http)
+2022-07-23 22:34:06.359 INFO  12008 --- [main] org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9998"]
+2022-07-23 22:34:06.359 INFO  12008 --- [main] org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-07-23 22:34:06.360 INFO  12008 --- [main] org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-23 22:34:06.361 INFO  12008 --- [main] org.apache.catalina.core.AprLifecycleListener - An older version [1.2.16] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.23]
+2022-07-23 22:34:06.361 INFO  12008 --- [main] org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2022-07-23 22:34:06.361 INFO  12008 --- [main] org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2022-07-23 22:34:06.361 INFO  12008 --- [main] org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2022-07-23 22:34:07.435 INFO  12008 --- [main] org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2022-07-23 22:34:07.529 INFO  12008 --- [main] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-07-23 22:34:07.529 INFO  12008 --- [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2477 ms
+2022-07-23 22:34:07.716 INFO  12008 --- [main] org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-23 22:34:07.774 INFO  12008 --- [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 5.4.25.Final
+2022-07-23 22:34:07.963 INFO  12008 --- [main] org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-23 22:34:08.055 INFO  12008 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-07-23 22:34:08.524 INFO  12008 --- [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-07-23 22:34:08.538 INFO  12008 --- [main] org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-07-23 22:34:09.676 INFO  12008 --- [main] o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-23 22:34:09.685 INFO  12008 --- [main] o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-23 22:34:11.520 WARN  12008 --- [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-23 22:34:11.693 INFO  12008 --- [main] o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-23 22:34:11.898 INFO  12008 --- [main] org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9998"]
+2022-07-23 22:34:12.064 INFO  12008 --- [main] o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9998 (http) with context path ''
+2022-07-23 22:34:12.328 INFO  12008 --- [main] com.al_tair.storage.StorageApplication - Started StorageApplication in 7.709 seconds (JVM running for 9.26)
+2022-07-23 22:57:08.205 INFO  12008 --- [http-nio-9998-exec-1] o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-23 22:57:08.213 INFO  12008 --- [http-nio-9998-exec-1] org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-07-23 22:57:08.309 INFO  12008 --- [http-nio-9998-exec-1] org.springframework.web.servlet.DispatcherServlet - Completed initialization in 95 ms
+2022-07-23 22:57:35.637 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6f654a9d (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.644 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72acf956 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.648 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3758643c (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.651 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64a06277 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.654 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@67aecae1 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.656 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@72dde90b (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.657 WARN  12008 --- [http-nio-9998-exec-8] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@599a6d52 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.657 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6d01ae8 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.658 WARN  12008 --- [http-nio-9998-exec-8] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@70fa42b4 (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.
+2022-07-23 22:57:35.659 WARN  12008 --- [http-nio-9998-exec-9] com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6104739f (No operations allowed after connection closed.). Possibly consider using a shorter maxLifetime value.

@@ -1,13 +1,9 @@
 package com.al_tair.storage.common;
 
+import lombok.Getter;
 /**
  * @author Al_tair
  * @date 2022/7/18-14:07
- */
-
-import lombok.Getter;
-
-/**
  * 结果类枚举
  */
 @Getter
