@@ -3,27 +3,25 @@
     class="header-menu"
     :default-active="activeIndex"
     :router="true"
-    mode="horizontal"
-  >
+    mode="horizontal">
+    <el-menu-item>
+      <el-image class="logo"
+                src="https://use-typora.oss-cn-hangzhou.aliyuncs.com/image-20221211160850795.png"></el-image>
+    </el-menu-item>
     <el-menu-item
+      class="home"
       index="Home"
-      :route="{ name: 'Home', query: { fileType: 0, filePath: '/' } }"
-      >首页</el-menu-item
-    >
+      :route="{ name: 'Home', query: { fileType: 0, filePath: '/' } }">首页</el-menu-item>
     <el-menu-item
       class="login"
       index="Login"
       :route="{ name: 'Login' }"
-      v-show="!isLogin"
-      >登录</el-menu-item
-    >
+      v-show="!isLogin">登录</el-menu-item>
     <el-menu-item
       class="register"
       index="Register"
       :route="{ name: 'Register' }"
-      v-show="!isLogin"
-      >注册</el-menu-item
-    >
+      v-show="!isLogin">注册</el-menu-item>
     <!-- 为了和其他菜单样式保持一致，请一定要添加类名 el-menu-item -->
     <div class="el-menu-item exit" @click="exitButton()" v-show="isLogin">
       退出
@@ -72,9 +70,19 @@ export default {
 <style lang="stylus" scoped>
 .header-menu {
   padding: 0 24px;
-
+  font-family: '华文楷体';
   .login, .register, .username, .exit {
     float: right;
+    font-size: 20px
+  }
+  .home{
+    font-size: 20px;
+    position: relative;
+    margin-left: -100px;
+  }
+  .logo{
+    width: 60%;
+    padding: 0 0px;
   }
 }
 </style>

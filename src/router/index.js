@@ -4,8 +4,8 @@ import Home from '../views/Home/index.vue'  //  引入Home页面对应的文件
 
 Vue.use(VueRouter)  //  将VueRouter挂载在Vue上
 
-// 创建路由列表
 /**
+ * 创建路由列表
  * 1. route level code-splitting
  * 2. this generates a separate chunk (about.[hash].js) for this route :
  *    这会为该路由生成一个单独的块(about.[hash].js)，

@@ -8,29 +8,25 @@
         ref="ruleForm"
         label-width="100px"
         class="demo-ruleForm"
-        hide-required-asterisk
-      >
+        hide-required-asterisk >
         <el-form-item prop="telephone">
           <el-input
             prefix-icon="el-icon-mobile-phone"
             v-model="ruleForm.telephone"
-            placeholder="手机号"
-          ></el-input>
+            placeholder="手机号"></el-input>
         </el-form-item>
         <el-form-item prop="password">
           <el-input
             prefix-icon="el-icon-lock"
             v-model="ruleForm.password"
             placeholder="密码"
-            show-password
-          ></el-input>
+            show-password></el-input>
         </el-form-item>
         <el-form-item class="loginButtonWrapper">
           <el-button
             class="loginButton"
             type="primary"
-            @click="submitForm('ruleForm')"
-          >
+            @click="submitForm('ruleForm')">
             登录
           </el-button>
         </el-form-item>
@@ -107,9 +103,11 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .loginWrapper {
-  height: 550px !important;
-  min-height: 550px !important;
+  height: 100% !important;
+  min-height: 800px !important;
   padding-top: 50px;
+  background-color: #ecf5ff;
+  font-family: '华文楷体';
 
   .formWrapper {
     width: 375px;
@@ -146,6 +144,7 @@ export default {
         }
 
         &>>> .el-button {
+          font-family: '华文楷体';
           padding: 10px 90px;
           font-size: 16px;
         }

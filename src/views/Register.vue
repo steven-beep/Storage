@@ -36,8 +36,7 @@
           <el-button
             class="registerButton"
             type="primary"
-            @click="submitForm('ruleForm')"
-            >注册</el-button
+            @click="submitForm('ruleForm')">注册</el-button
           >
         </el-form-item>
       </el-form>
@@ -125,9 +124,10 @@ export default {
 <style lang="stylus" scoped>
 .registerWrapper {
   height: 500px !important;
-  min-height: 500px !important;
+  min-height: 800px !important;
   width: 100% !important;
   padding-top: 50px;
+  background-color: #ecf5ff
 
   .formWrapper {
     width: 375px;

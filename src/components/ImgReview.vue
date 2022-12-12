@@ -3,8 +3,7 @@
     class="img-review-wrapper"
     v-show="imgReviewVisible"
     @click.self="closeImgReview"
-    @mousewheel.prevent="rollImg()"
-  >
+    @mousewheel.prevent="rollImg()">
     <!-- 顶部信息栏 & 工具栏 -->
     <div class="tip-wrapper" v-if="imgReviewVisible">
       <div class="name" :title="activeFileName + activeExtendName">
